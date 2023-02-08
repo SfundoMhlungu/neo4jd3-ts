@@ -1,11 +1,12 @@
 export default function createNeoChart(parentElement: string | Node, options: Record<any, any>): any;
-interface singlePoint {
+interface Withrelationpoint {
     start: Record<any, any>;
     end: Record<any, any>;
     segments: Record<any, any>;
 }
 interface Neodata {
-    p: singlePoint;
+    p?: Withrelationpoint;
+    n?: Record<any, any>;
 }
 export declare function NeoDatatoChartData(data: Array<Neodata>): {
     results: {
